@@ -355,8 +355,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .practice-links { grid-template-columns: 1fr; }
   .search-wrap { top: 50px; }
   html { scroll-padding-top: 110px; }
+  body.sidebar-open { overflow: hidden; }
 }
-	  body.sidebar-open { overflow: hidden; }
 
 /* ========== Print ========== */
 @media print {
@@ -1232,7 +1232,7 @@ CHAPTER_CONTENT['ch04'] = `
 
 <!-- 经典图示 -->
 <div class="diagram">
-  <img src="images/tikz_page09.png" alt="凸透镜成像规律与视力矫正综合图示" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <img src="images/tikz_page06.png" alt="凸透镜成像规律与视力矫正综合图示" loading="lazy" style="max-width:100%;border-radius:8px;">
   <div class="caption">图：凸透镜成像规律（u-v关系）、三条特殊光线与近视/远视矫正综合图示</div>
 </div>
 
@@ -1422,6 +1422,12 @@ CHAPTER_CONTENT['ch04'] = `
 CHAPTER_CONTENT['ch05'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>质量与密度是八年级上学期力学的基础章节，也是中考的必考内容。本章从"质量"的概念出发，引入密度的定义与计算，最终将密度知识应用于社会生活。核心公式为 $\\rho = m / V$，要求学生熟练掌握天平的使用、量筒的读数以及固体/液体密度的测量方法。密度的应用（鉴别物质、判断空心实心、计算不规则物体体积）是中考实验探究题的高频考点。
+</div>
+
+<!-- 经典图示 -->
+<div class="diagram">
+  <img src="images/tikz_diagrams.png" alt="质量密度综合图示" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <div class="caption">图：质量测量（天平使用）、密度概念与量筒测体积综合图示</div>
 </div>
 
 <!-- ==================== ch05s1: 质量及其测量 ==================== -->
@@ -1897,7 +1903,11 @@ CHAPTER_CONTENT['ch08'] = `
   <strong>📖 本章概述：</strong>"压强"是沪科版八年级下学期力学重点章节，也是上海中考物理的<strong>核心高频考点</strong>（占分值 8～12 分）。本章从压力与压强的概念出发，系统学习固体压强、液体压强、大气压强和流体压强四大模块。核心公式 $p = F / S$（固体压强）和 $p = \\rho g h$（液体压强）是中考计算题的必考内容。液体压强规律的实验探究（微小压强计）、托里拆利实验、流体压强与流速的关系（伯努利原理）也是常考的实验与现象分析题。本章内容与生活联系极为紧密——从书包带做宽到深海潜水器，从吸管喝饮料到飞机升力，处处渗透着压强的应用。
 </div>
 
-
+<!-- 经典图示 -->
+<div class="diagram">
+  <img src="images/tikz_test.png" alt="压强综合图示" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <div class="caption">图：固体压强、液体压强与流体压强综合图示</div>
+</div>
 
 <!-- Section 8.1: 压力与压强 -->
 <div class="knowledge-card" id="ch08s1">
@@ -2669,6 +2679,12 @@ CHAPTER_CONTENT['ch11'] = `
     <tr><td>$F_1R = F_2r$</td><td>轮轴平衡</td><td>实质是杠杆原理</td></tr>
   </table>
 </div>
+
+<!-- 综合图示 -->
+<div class="diagram">
+  <img src="images/tikz_pulley_lever_final.png" alt="杠杆滑轮综合图示" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <div class="caption">图：简单机械综合图示——杠杆、定滑轮、动滑轮与滑轮组完整对比</div>
+</div>
 `;
 
 CHAPTER_CONTENT['ch12'] = `
@@ -2939,6 +2955,222 @@ CHAPTER_CONTENT['ch12'] = `
   </table>
 </div>
 `;
+
+// ===== Ch13 温度与物态变化 (九年级上学期) =====
+CHAPTER_CONTENT['ch13'] = `
+<div class="chapter-intro">
+  <strong>📖 本章概述：</strong>温度与物态变化是沪科版九年级上学期开篇第一章，是热学的基础。本章围绕<strong>温度测量</strong>和<strong>六种物态变化</strong>展开——熔化与凝固、汽化与液化、升华与凝华。核心考点包括：晶体熔化曲线分析（平台的含义）、蒸发与沸腾的对比、影响蒸发快慢的因素、沸点与气压的关系。上海中考常以实验探究题和图像分析题形式出现。
+</div>
+
+<!-- ==================== Ch13 经典图示 ==================== -->
+<div class="diagram">
+  <img src="images/tikz_page07.png" alt="温度与物态变化示意" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <div class="caption">图：温度与物态变化——六种物态变化关系与温度计原理示意</div>
+</div>
+
+<!-- ==================== ch13s1: 温度与温度计 ==================== -->
+<div class="knowledge-card card-definition" id="ch13s1">
+  <span class="card-label label-def">核心概念</span>
+  <h3>一、温度与温度计</h3>
+
+  <h4>1. 温度（Temperature）</h4>
+  <p><strong>定义：</strong>温度表示物体的<strong>冷热程度</strong>。常用单位：摄氏度（℃）。</p>
+
+  <h4>2. 摄氏温标的规定</h4>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>温度</th><th>规定条件</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0 ℃</strong></td><td>一个标准大气压下<strong>冰水混合物</strong>的温度</td></tr>
+      <tr><td><strong>100 ℃</strong></td><td>一个标准大气压下<strong>沸水</strong>的温度</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>⚠️ 摄氏温度读法：如"36℃"读作"36摄氏度"，不能读作"摄氏36度"。</p>
+
+  <h4>3. 温度计原理</h4>
+  <p>常用温度计是根据液体<strong>热胀冷缩</strong>的性质制成的（水银、酒精、煤油）。</p>
+
+  <h4>4. 三种常用温度计</h4>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>类型</th><th>量程</th><th>分度值</th><th>特殊结构</th><th>使用注意</th></tr></thead>
+    <tbody>
+      <tr><td><strong>实验室温度计</strong></td><td>-20℃ ~ 110℃</td><td>1℃</td><td>无</td><td>不能离开被测液体读数</td></tr>
+      <tr><td><strong>体温计</strong></td><td>35℃ ~ 42℃</td><td>0.1℃</td><td>缩口（很细的弯管）</td><td>可离开人体读数；用前需<strong>甩一下</strong></td></tr>
+      <tr><td><strong>寒暑表</strong></td><td>-30℃ ~ 60℃</td><td>1℃</td><td>无</td><td>测气温用</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>5. 温度计使用规则（四步法）</h4>
+  <ol>
+    <li><strong>看清</strong>量程和分度值</li>
+    <li><strong>玻璃泡</strong>完全浸入被测液体，不碰容器底和壁</li>
+    <li><strong>等待</strong>示数稳定后再读数</li>
+    <li><strong>读数</strong>时视线与液柱上表面<strong>相平</strong>（体温计可取出读）</li>
+  </ol>
+</div>
+
+<!-- Section 2: 熔化与凝固 -->
+<div class="knowledge-card card-key" id="ch13s2">
+  <span class="card-label label-formula">13.2 核心考点</span>
+  <h3>二、熔化与凝固</h3>
+
+  <h4>1. 基本概念</h4>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>过程</th><th>状态变化</th><th>热量</th><th>温度特点（晶体）</th></tr></thead>
+    <tbody>
+      <tr><td><strong>熔化</strong></td><td>固态 → 液态</td><td><strong>吸热</strong></td><td>达到熔点，熔化过程中<strong>温度不变</strong></td></tr>
+      <tr><td><strong>凝固</strong></td><td>液态 → 固态</td><td><strong>放热</strong></td><td>达到凝固点，凝固过程中<strong>温度不变</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>💡 同一种晶体，熔点和凝固点<strong>相同</strong>（如：冰的熔点是0℃ = 水的凝固点0℃）。</p>
+
+  <h4>2. 晶体 vs 非晶体</h4>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>类型</th><th>熔点/凝固点</th><th>熔化过程温度</th><th>典型物质</th></tr></thead>
+    <tbody>
+      <tr><td><strong>晶体</strong></td><td>有<strong>固定</strong>熔点</td><td>温度<strong>不变</strong>（平台）</td><td>冰(0℃)、海波(48℃)、萘(80℃)、各种金属</td></tr>
+      <tr><td><strong>非晶体</strong></td><td><strong>没有</strong>固定熔点</td><td>温度<strong>持续升高</strong></td><td>玻璃、松香、石蜡、沥青、塑料</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>3. 熔化曲线解读（中考高频考点）</h4>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>阶段</th><th>温度变化</th><th>状态</th><th>吸/放热</th></tr></thead>
+    <tbody>
+      <tr><td>AB段（熔点以下）</td><td>不断升高</td><td><strong>固态</strong></td><td>吸热</td></tr>
+      <tr><td style="background:#fff8e1;">BC段（平台）</td><td style="background:#fff8e1;">不变 = 熔点</td><td style="background:#fff8e1;"><strong>固液共存</strong></td><td style="background:#fff8e1;">吸热</td></tr>
+      <tr><td>CD段（熔点以上）</td><td>不断升高</td><td><strong>液态</strong></td><td>吸热</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>⚠️ 常见错误："晶体熔化时温度不变，所以不吸热"——<strong>错！</strong>熔化过程<strong>一直需要吸热</strong>，吸收的热量用于破坏晶体结构（熔化热），不用于升温。</p>
+</div>
+
+<!-- Section 3: 汽化与液化 -->
+<div class="knowledge-card card-formula" id="ch13s3">
+  <span class="card-label label-formula">13.3 核心考点</span>
+  <h3>三、汽化与液化</h3>
+
+  <h4>1. 汽化 — 蒸发与沸腾</h4>
+  <p><strong>汽化：</strong>液态 → 气态，<strong>吸热</strong>。分为<strong>蒸发</strong>和<strong>沸腾</strong>两种方式。</p>
+
+  <h4>2. 蒸发（Evaporation）</h4>
+  <ul>
+    <li>发生在液体<strong>表面</strong>，<strong>任何温度</strong>下都能发生</li>
+    <li>缓慢的汽化现象</li>
+    <li><strong>制冷作用：</strong>液体蒸发时从周围<strong>吸热</strong>→ 自身和周围物体温度降低</li>
+  </ul>
+  <p><strong>影响蒸发快慢的因素：</strong></p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>因素</th><th>影响</th><th>实例</th></tr></thead>
+    <tbody>
+      <tr><td>液体<strong>温度</strong>越高</td><td>蒸发越快</td><td>热天衣服干得快</td></tr>
+      <tr><td>液体<strong>表面积</strong>越大</td><td>蒸发越快</td><td>衣服摊开晾</td></tr>
+      <tr><td>液面<strong>空气流动</strong>越快</td><td>蒸发越快</td><td>吹风机吹干头发</td></tr>
+      <tr><td>空气<strong>湿度</strong>越小</td><td>蒸发越快</td><td>干燥天气衣服易干</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>3. 沸腾（Boiling）</h4>
+  <ul>
+    <li>在液体<strong>表面和内部同时</strong>发生的剧烈汽化</li>
+    <li>需要达到一定温度——<strong>沸点</strong></li>
+    <li>沸腾过程中<strong>继续吸热</strong>但<strong>温度不变</strong></li>
+  </ul>
+
+  <h4>4. 沸点与气压的关系</h4>
+  <div class="formula-display">
+    <strong>🔑 气压越高，沸点越高；气压越低，沸点越低</strong>
+  </div>
+  <ul>
+    <li>🏔️ 高原上气压低 → 沸点低 → 水不到100℃就沸腾 → 饭煮不熟 → 用<strong>高压锅</strong></li>
+    <li>🍳 高压锅内气压高 → 沸点高 → 食物容易煮熟</li>
+  </ul>
+
+  <h4>5. 液化（Liquefaction）</h4>
+  <p><strong>液化：</strong>气态 → 液态，<strong>放热</strong>。</p>
+  <p><strong>两种方法：</strong>① <strong>降低温度</strong>（如：冬天呼出"白气"）② <strong>压缩体积</strong>（如：液化石油气罐）</p>
+  <p>💡 生活中液化现象：眼镜起雾、冰镇饮料瓶外壁的水珠、浴室镜面模糊、云和雨的形成。</p>
+</div>
+
+<!-- Section 4: 升华与凝华 -->
+<div class="knowledge-card card-warning" id="ch13s4">
+  <span class="card-label label-warning">13.4 易混淆考点</span>
+  <h3>四、升华与凝华</h3>
+
+  <h4>1. 升华（Sublimation）</h4>
+  <p><strong>升华：</strong>固态 → 气态（跳过液态），<strong>吸热</strong>。</p>
+  <p>实例：樟脑丸变小、干冰(固态CO₂)升华、冰冻衣服变干、钨丝升华变细。</p>
+
+  <h4>2. 凝华（Deposition）</h4>
+  <p><strong>凝华：</strong>气态 → 固态（跳过液态），<strong>放热</strong>。</p>
+  <p>实例：霜的形成、窗玻璃上的冰花（室内侧）、灯泡内壁钨的沉积（变黑）。</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>变化</th><th>方向</th><th>热量</th><th>应用/现象</th></tr></thead>
+    <tbody>
+      <tr><td>升华</td><td>固 → 气</td><td>吸热</td><td>干冰制冷、人工降雨</td></tr>
+      <tr><td>凝华</td><td>气 → 固</td><td>放热</td><td>霜、雾凇、冰花</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- Section 5: 水资源 -->
+<div class="knowledge-card card-experiment" id="ch13s5">
+  <span class="card-label label-experiment">13.5 STS 跨学科</span>
+  <h3>五、水资源与节水</h3>
+  <ul>
+    <li>地球上的水 97% 是海水，淡水仅占约 3%，可利用的淡水不到 1%</li>
+    <li><strong>水循环：</strong>蒸发 → 上升 → 液化(云) → 降水 → 汇集 → 再蒸发</li>
+    <li>节水方法：使用节水器具、重复利用水、减少水污染</li>
+  </ul>
+</div>
+
+<!-- 经典例题 -->
+<div class="knowledge-card card-example" id="ch13-examples">
+  <span class="card-label label-example">典型例题</span>
+  <h3>典型例题精讲</h3>
+
+  <h4>例1（晶体熔化曲线分析）</h4>
+  <p>如图是某物质的加热熔化曲线，BC段温度为48℃不变。请判断：(1)该物质是晶体还是非晶体？(2)BC段物质处于什么状态？(3)BC段是否吸热？</p>
+  <p><strong>解：</strong>(1)有固定熔化温度(48℃)→是<strong>晶体</strong>。(2)BC段为熔化过程→<strong>固液共存</strong>状态。(3)熔化过程一直需要<strong>吸热</strong>，吸收热量用于破坏晶体结构，温度不升高。</p>
+  <p style="border:1px solid var(--accent);padding:4px 12px;display:inline-block;border-radius:4px;">答案：晶体、固液共存、需要吸热</p>
+
+  <h4>例2（蒸发制冷）</h4>
+  <p>夏天游泳后从水中出来，被风吹会感到冷，为什么？</p>
+  <p><strong>解：</strong>人从水中出来，身上有水。风加快了<strong>空气流动</strong>，从而加快了水的<strong>蒸发</strong>。水蒸发时从人体<strong>吸收热量</strong>，使皮肤温度降低，所以感到冷。</p>
+</div>
+
+<!-- 易错点 -->
+<div class="knowledge-card card-warning" id="ch13-misconceptions">
+  <span class="card-label label-warning">易错辨析</span>
+  <h3>常见误区</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>易错点</th><th>正确理解</th></tr></thead>
+    <tbody>
+      <tr><td>"熔化时温度不变=不吸热"</td><td>❌ 熔化过程<strong>一直需要吸热</strong>！热量用于熔化而不是升温</td></tr>
+      <tr><td>"冬天呼出白气是汽化"</td><td>❌ 白气是水蒸气<strong>液化</strong>成的小水珠（液态），不是气体</td></tr>
+      <tr><td>"蒸发只在沸腾温度发生"</td><td>❌ 蒸发在<strong>任何温度</strong>都能发生</td></tr>
+      <tr><td>"樟脑丸变小是熔化"</td><td>❌ 樟脑丸直接从固态变气态→<strong>升华</strong>，不是先熔化再汽化</td></tr>
+      <tr><td>"冰花在窗户外面"</td><td>❌ 冬天室内暖湿空气遇到冷玻璃→水蒸气<strong>凝华</strong>成冰花，在<strong>室内</strong>一侧</td></tr>
+      <tr><td>"所有固体都有固定熔点"</td><td>❌ 只有<strong>晶体</strong>有固定熔点，非晶体没有</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>`;
 
 // ===== Ch14 内能与热机 (九年级上学期) =====
 CHAPTER_CONTENT['ch14'] = `
@@ -4245,7 +4477,11 @@ CHAPTER_CONTENT['ch19'] = `
   <strong>📖 本章概述：</strong>电能从哪里来是九年级下学期电磁学的延伸章节，揭示了"磁如何生电"——<strong>电磁感应</strong>现象。本章从法拉第实验出发，引出<strong>感应电流的产生条件</strong>（闭合回路 + 切割磁感线）和<strong>影响感应电流方向的因素</strong>；进而学习<strong>发电机原理</strong>（交流发电机与直流发电机的区别、频率与转速关系）；最后探究<strong>电能输送</strong>中的功率损耗问题——远距离输电为什么采用高压（$P_{\\text{损}} = I^2R$）。中考中电磁感应条件的辨析、发电机原理图识别、输电损耗计算是核心考点。
 </div>
 
-
+<!-- 经典图示 -->
+<div class="diagram">
+  <img src="images/tikz_motor_generator.png" alt="发电机原理图示" loading="lazy" style="max-width:100%;border-radius:8px;">
+  <div class="caption">图：发电机原理——电磁感应与电能产生综合图示</div>
+</div>
 
 <!-- ==================== ch19s1: 电磁感应——法拉第 ==================== -->
 <div class="knowledge-card card-definition" id="ch19s1">
@@ -4901,222 +5137,6 @@ CHAPTER_CONTENT['ch21'] = `
 </div>
 `;
 
-CHAPTER_CONTENT['ch13'] = `
-<div class="chapter-intro">
-  <strong>📖 本章概述：</strong>温度与物态变化是沪科版九年级上学期开篇第一章，是热学的基础。本章围绕<strong>温度测量</strong>和<strong>六种物态变化</strong>展开——熔化与凝固、汽化与液化、升华与凝华。核心考点包括：晶体熔化曲线分析（平台的含义）、蒸发与沸腾的对比、影响蒸发快慢的因素、沸点与气压的关系。上海中考常以实验探究题和图像分析题形式出现。
-</div>
-
-<!-- ==================== Ch13 经典图示 ==================== -->
-<div class="diagram">
-  <img src="images/tikz_page07.png" alt="温度与物态变化示意" loading="lazy" style="max-width:100%;border-radius:8px;">
-  <div class="caption">图：温度与物态变化——六种物态变化关系与温度计原理示意</div>
-</div>
-
-<!-- ==================== ch13s1: 温度与温度计 ==================== -->
-<div class="knowledge-card card-definition" id="ch13s1">
-  <span class="card-label label-def">核心概念</span>
-  <h3>一、温度与温度计</h3>
-
-  <h4>1. 温度（Temperature）</h4>
-  <p><strong>定义：</strong>温度表示物体的<strong>冷热程度</strong>。常用单位：摄氏度（℃）。</p>
-
-  <h4>2. 摄氏温标的规定</h4>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>温度</th><th>规定条件</th></tr></thead>
-    <tbody>
-      <tr><td><strong>0 ℃</strong></td><td>一个标准大气压下<strong>冰水混合物</strong>的温度</td></tr>
-      <tr><td><strong>100 ℃</strong></td><td>一个标准大气压下<strong>沸水</strong>的温度</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p>⚠️ 摄氏温度读法：如"36℃"读作"36摄氏度"，不能读作"摄氏36度"。</p>
-
-  <h4>3. 温度计原理</h4>
-  <p>常用温度计是根据液体<strong>热胀冷缩</strong>的性质制成的（水银、酒精、煤油）。</p>
-
-  <h4>4. 三种常用温度计</h4>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>类型</th><th>量程</th><th>分度值</th><th>特殊结构</th><th>使用注意</th></tr></thead>
-    <tbody>
-      <tr><td><strong>实验室温度计</strong></td><td>-20℃ ~ 110℃</td><td>1℃</td><td>无</td><td>不能离开被测液体读数</td></tr>
-      <tr><td><strong>体温计</strong></td><td>35℃ ~ 42℃</td><td>0.1℃</td><td>缩口（很细的弯管）</td><td>可离开人体读数；用前需<strong>甩一下</strong></td></tr>
-      <tr><td><strong>寒暑表</strong></td><td>-30℃ ~ 60℃</td><td>1℃</td><td>无</td><td>测气温用</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <h4>5. 温度计使用规则（四步法）</h4>
-  <ol>
-    <li><strong>看清</strong>量程和分度值</li>
-    <li><strong>玻璃泡</strong>完全浸入被测液体，不碰容器底和壁</li>
-    <li><strong>等待</strong>示数稳定后再读数</li>
-    <li><strong>读数</strong>时视线与液柱上表面<strong>相平</strong>（体温计可取出读）</li>
-  </ol>
-</div>
-
-<!-- Section 2: 熔化与凝固 -->
-<div class="knowledge-card card-key" id="ch13s2">
-  <span class="card-label label-formula">13.2 核心考点</span>
-  <h3>二、熔化与凝固</h3>
-
-  <h4>1. 基本概念</h4>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>过程</th><th>状态变化</th><th>热量</th><th>温度特点（晶体）</th></tr></thead>
-    <tbody>
-      <tr><td><strong>熔化</strong></td><td>固态 → 液态</td><td><strong>吸热</strong></td><td>达到熔点，熔化过程中<strong>温度不变</strong></td></tr>
-      <tr><td><strong>凝固</strong></td><td>液态 → 固态</td><td><strong>放热</strong></td><td>达到凝固点，凝固过程中<strong>温度不变</strong></td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p>💡 同一种晶体，熔点和凝固点<strong>相同</strong>（如：冰的熔点是0℃ = 水的凝固点0℃）。</p>
-
-  <h4>2. 晶体 vs 非晶体</h4>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>类型</th><th>熔点/凝固点</th><th>熔化过程温度</th><th>典型物质</th></tr></thead>
-    <tbody>
-      <tr><td><strong>晶体</strong></td><td>有<strong>固定</strong>熔点</td><td>温度<strong>不变</strong>（平台）</td><td>冰(0℃)、海波(48℃)、萘(80℃)、各种金属</td></tr>
-      <tr><td><strong>非晶体</strong></td><td><strong>没有</strong>固定熔点</td><td>温度<strong>持续升高</strong></td><td>玻璃、松香、石蜡、沥青、塑料</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <h4>3. 熔化曲线解读（中考高频考点）</h4>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>阶段</th><th>温度变化</th><th>状态</th><th>吸/放热</th></tr></thead>
-    <tbody>
-      <tr><td>AB段（熔点以下）</td><td>不断升高</td><td><strong>固态</strong></td><td>吸热</td></tr>
-      <tr><td style="background:#fff8e1;">BC段（平台）</td><td style="background:#fff8e1;">不变 = 熔点</td><td style="background:#fff8e1;"><strong>固液共存</strong></td><td style="background:#fff8e1;">吸热</td></tr>
-      <tr><td>CD段（熔点以上）</td><td>不断升高</td><td><strong>液态</strong></td><td>吸热</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p>⚠️ 常见错误："晶体熔化时温度不变，所以不吸热"——<strong>错！</strong>熔化过程<strong>一直需要吸热</strong>，吸收的热量用于破坏晶体结构（熔化热），不用于升温。</p>
-</div>
-
-<!-- Section 3: 汽化与液化 -->
-<div class="knowledge-card card-formula" id="ch13s3">
-  <span class="card-label label-formula">13.3 核心考点</span>
-  <h3>三、汽化与液化</h3>
-
-  <h4>1. 汽化 — 蒸发与沸腾</h4>
-  <p><strong>汽化：</strong>液态 → 气态，<strong>吸热</strong>。分为<strong>蒸发</strong>和<strong>沸腾</strong>两种方式。</p>
-
-  <h4>2. 蒸发（Evaporation）</h4>
-  <ul>
-    <li>发生在液体<strong>表面</strong>，<strong>任何温度</strong>下都能发生</li>
-    <li>缓慢的汽化现象</li>
-    <li><strong>制冷作用：</strong>液体蒸发时从周围<strong>吸热</strong>→ 自身和周围物体温度降低</li>
-  </ul>
-  <p><strong>影响蒸发快慢的因素：</strong></p>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>因素</th><th>影响</th><th>实例</th></tr></thead>
-    <tbody>
-      <tr><td>液体<strong>温度</strong>越高</td><td>蒸发越快</td><td>热天衣服干得快</td></tr>
-      <tr><td>液体<strong>表面积</strong>越大</td><td>蒸发越快</td><td>衣服摊开晾</td></tr>
-      <tr><td>液面<strong>空气流动</strong>越快</td><td>蒸发越快</td><td>吹风机吹干头发</td></tr>
-      <tr><td>空气<strong>湿度</strong>越小</td><td>蒸发越快</td><td>干燥天气衣服易干</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <h4>3. 沸腾（Boiling）</h4>
-  <ul>
-    <li>在液体<strong>表面和内部同时</strong>发生的剧烈汽化</li>
-    <li>需要达到一定温度——<strong>沸点</strong></li>
-    <li>沸腾过程中<strong>继续吸热</strong>但<strong>温度不变</strong></li>
-  </ul>
-
-  <h4>4. 沸点与气压的关系</h4>
-  <div class="formula-display">
-    <strong>🔑 气压越高，沸点越高；气压越低，沸点越低</strong>
-  </div>
-  <ul>
-    <li>🏔️ 高原上气压低 → 沸点低 → 水不到100℃就沸腾 → 饭煮不熟 → 用<strong>高压锅</strong></li>
-    <li>🍳 高压锅内气压高 → 沸点高 → 食物容易煮熟</li>
-  </ul>
-
-  <h4>5. 液化（Liquefaction）</h4>
-  <p><strong>液化：</strong>气态 → 液态，<strong>放热</strong>。</p>
-  <p><strong>两种方法：</strong>① <strong>降低温度</strong>（如：冬天呼出"白气"）② <strong>压缩体积</strong>（如：液化石油气罐）</p>
-  <p>💡 生活中液化现象：眼镜起雾、冰镇饮料瓶外壁的水珠、浴室镜面模糊、云和雨的形成。</p>
-</div>
-
-<!-- Section 4: 升华与凝华 -->
-<div class="knowledge-card card-warning" id="ch13s4">
-  <span class="card-label label-warning">13.4 易混淆考点</span>
-  <h3>四、升华与凝华</h3>
-
-  <h4>1. 升华（Sublimation）</h4>
-  <p><strong>升华：</strong>固态 → 气态（跳过液态），<strong>吸热</strong>。</p>
-  <p>实例：樟脑丸变小、干冰(固态CO₂)升华、冰冻衣服变干、钨丝升华变细。</p>
-
-  <h4>2. 凝华（Deposition）</h4>
-  <p><strong>凝华：</strong>气态 → 固态（跳过液态），<strong>放热</strong>。</p>
-  <p>实例：霜的形成、窗玻璃上的冰花（室内侧）、灯泡内壁钨的沉积（变黑）。</p>
-
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>变化</th><th>方向</th><th>热量</th><th>应用/现象</th></tr></thead>
-    <tbody>
-      <tr><td>升华</td><td>固 → 气</td><td>吸热</td><td>干冰制冷、人工降雨</td></tr>
-      <tr><td>凝华</td><td>气 → 固</td><td>放热</td><td>霜、雾凇、冰花</td></tr>
-    </tbody>
-  </table>
-  </div>
-</div>
-
-<!-- Section 5: 水资源 -->
-<div class="knowledge-card card-experiment" id="ch13s5">
-  <span class="card-label label-experiment">13.5 STS 跨学科</span>
-  <h3>五、水资源与节水</h3>
-  <ul>
-    <li>地球上的水 97% 是海水，淡水仅占约 3%，可利用的淡水不到 1%</li>
-    <li><strong>水循环：</strong>蒸发 → 上升 → 液化(云) → 降水 → 汇集 → 再蒸发</li>
-    <li>节水方法：使用节水器具、重复利用水、减少水污染</li>
-  </ul>
-</div>
-
-<!-- 经典例题 -->
-<div class="knowledge-card card-example" id="ch13-examples">
-  <span class="card-label label-example">典型例题</span>
-  <h3>典型例题精讲</h3>
-
-  <h4>例1（晶体熔化曲线分析）</h4>
-  <p>如图是某物质的加热熔化曲线，BC段温度为48℃不变。请判断：(1)该物质是晶体还是非晶体？(2)BC段物质处于什么状态？(3)BC段是否吸热？</p>
-  <p><strong>解：</strong>(1)有固定熔化温度(48℃)→是<strong>晶体</strong>。(2)BC段为熔化过程→<strong>固液共存</strong>状态。(3)熔化过程一直需要<strong>吸热</strong>，吸收热量用于破坏晶体结构，温度不升高。</p>
-  <p style="border:1px solid var(--accent);padding:4px 12px;display:inline-block;border-radius:4px;">答案：晶体、固液共存、需要吸热</p>
-
-  <h4>例2（蒸发制冷）</h4>
-  <p>夏天游泳后从水中出来，被风吹会感到冷，为什么？</p>
-  <p><strong>解：</strong>人从水中出来，身上有水。风加快了<strong>空气流动</strong>，从而加快了水的<strong>蒸发</strong>。水蒸发时从人体<strong>吸收热量</strong>，使皮肤温度降低，所以感到冷。</p>
-</div>
-
-<!-- 易错点 -->
-<div class="knowledge-card card-warning" id="ch13-misconceptions">
-  <span class="card-label label-warning">易错辨析</span>
-  <h3>常见误区</h3>
-  <div class="table-wrap">
-  <table>
-    <thead><tr><th>易错点</th><th>正确理解</th></tr></thead>
-    <tbody>
-      <tr><td>"熔化时温度不变=不吸热"</td><td>❌ 熔化过程<strong>一直需要吸热</strong>！热量用于熔化而不是升温</td></tr>
-      <tr><td>"冬天呼出白气是汽化"</td><td>❌ 白气是水蒸气<strong>液化</strong>成的小水珠（液态），不是气体</td></tr>
-      <tr><td>"蒸发只在沸腾温度发生"</td><td>❌ 蒸发在<strong>任何温度</strong>都能发生</td></tr>
-      <tr><td>"樟脑丸变小是熔化"</td><td>❌ 樟脑丸直接从固态变气态→<strong>升华</strong>，不是先熔化再汽化</td></tr>
-      <tr><td>"冰花在窗户外面"</td><td>❌ 冬天室内暖湿空气遇到冷玻璃→水蒸气<strong>凝华</strong>成冰花，在<strong>室内</strong>一侧</td></tr>
-      <tr><td>"所有固体都有固定熔点"</td><td>❌ 只有<strong>晶体</strong>有固定熔点，非晶体没有</td></tr>
-    </tbody>
-  </table>
-  </div>
-</div>`;
-
-
 // ===== Render Content =====
 function renderAllChapters() {
   const container = document.getElementById('chapterContainer');
@@ -5132,33 +5152,6 @@ function renderAllChapters() {
           </div>
           ${CHAPTER_CONTENT[ch.id]}
         </section>`;
-      } else {
-        // Placeholder
-        html += `<section class="chapter" id="${ch.id}">
-          <div class="chapter-header">
-            <div class="ch-label">第${ch.n}章 · ${g.label}</div>
-            <h2>${ch.icon} ${ch.title}</h2>
-          </div>
-          <div class="chapter-intro">
-            <strong>📖 本章概述：</strong>内容正在生成中，将涵盖 ${ch.sections.map(s=>s.t).join('、')} 等知识点。含定义、公式、图示、经典例题及练习题链接。
-          </div>`;
-        ch.sections.forEach(s => {
-          html += `<div class="knowledge-card" id="${s.id}">
-            <h3>${s.t}</h3>
-            <p class="placeholder">⏳ 内容正在从网络搜集并整理中，即将更新...</p>
-          </div>`;
-        });
-        html += `<div class="practice-links">
-          <a href="https://tiku.one/${ch.id}" target="_blank" rel="noopener" class="practice-link">
-            <span class="pl-icon">📝</span><div class="pl-info"><div class="pl-title">${ch.title}基础练习</div><div class="pl-site">在线题库</div></div><span class="pl-badge badge-basic">基础</span>
-          </a>
-          <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTQxNTM2OA==&mid=2247483788&idx=1&sn=09516926ba3f224b94c06f6c7da3b9d6" target="_blank" rel="noopener" class="practice-link">
-            <span class="pl-icon">📚</span><div class="pl-info"><div class="pl-title">${ch.title}同步练习</div><div class="pl-site">微信公众号（免费）</div></div><span class="pl-badge badge-medium">提高</span>
-          </a>
-        </div>
-        </section>
-
-`;
       }
     });
   });
@@ -5173,7 +5166,7 @@ document.addEventListener('click', e => {
     const list = gradeToggle.nextElementSibling;
     const isOpen = gradeToggle.classList.contains('open');
     if (isOpen) { gradeToggle.classList.remove('open'); list.style.maxHeight = '0'; gradeToggle.setAttribute('aria-expanded','false'); }
-    else { gradeToggle.classList.add('open'); list.style.maxHeight = (list.querySelectorAll('.chapter-group').length * 28 + list.querySelectorAll('.section-link').length * 22) + 'px'; gradeToggle.setAttribute('aria-expanded','true'); }
+    else { gradeToggle.classList.add('open'); list.style.maxHeight = list.scrollHeight + 'px'; gradeToggle.setAttribute('aria-expanded','true'); }
     return;
   }
   // Chapter level toggle (expand sections)
