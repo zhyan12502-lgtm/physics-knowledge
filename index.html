@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="上海初中物理知识集合 — 沪科版（2024新编），涵盖八年级至九年级全部21章知识点、公式、图示和练习题链接。">
-<meta name="keywords" content="初中物理,上海物理,沪科版,中考物理,物理知识点,杠杆,滑轮,压强,浮力,电学,光学">
+<meta name="description" content="上海初中物理知识集合 — 沪科版（2024新编），涵盖八年级至九年级全部16章知识点（八上八下依2024/2025新版课本）、公式、图示和练习题链接。">
+<meta name="keywords" content="初中物理,上海物理,沪科版,中考物理,物理知识点,杠杆,滑轮,压强,浮力,密度,物态变化">
 <title>初中物理知识集合 — 沪科版</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -378,7 +378,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     <div class="subtitle">沪科版（2024新编）</div>
   </div>
   <nav class="sidebar-nav" id="sidebarNav" aria-label="章节导航"></nav>
-  <div class="sidebar-footer">v1.0 · 2026-06 · 共21章</div>
+  <div class="sidebar-footer">v2.0 · 2026-06 · 共16章（新版课本）</div>
 </aside>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
@@ -407,155 +407,63 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 <script>
 // ===== DATA: Chapter Structure =====
 const COURSE = [
-  {
-    id: 'g8s1', label: '八年级上学期', chapters: [
-      { id:'ch01', n:1, title:'运动的世界', icon:'🏃', sections:[
-        {id:'ch01s1',t:'长度与时间的测量'},
-        {id:'ch01s2',t:'运动的描述——动与静'},
-        {id:'ch01s3',t:'运动的快慢——速度'},
-        {id:'ch01s4',t:'测量平均速度'}
-      ]},
-      { id:'ch02', n:2, title:'声的世界', icon:'🔊', sections:[
-        {id:'ch02s1',t:'声音的产生与传播'},
-        {id:'ch02s2',t:'声音的特性'},
-        {id:'ch02s3',t:'超声波与次声波'},
-        {id:'ch02s4',t:'噪声控制与健康生活'}
-      ]},
-      { id:'ch03', n:3, title:'光的世界', icon:'💡', sections:[
-        {id:'ch03s1',t:'光的直线传播'},
-        {id:'ch03s2',t:'光的反射定律'},
-        {id:'ch03s3',t:'平面镜成像'},
-        {id:'ch03s4',t:'光的折射'},
-        {id:'ch03s5',t:'光的色散'}
-      ]},
-      { id:'ch04', n:4, title:'神奇的透镜', icon:'🔍', sections:[
-        {id:'ch04s1',t:'凸透镜与凹透镜'},
-        {id:'ch04s2',t:'凸透镜成像规律'},
-        {id:'ch04s3',t:'眼睛与眼镜'},
-        {id:'ch04s4',t:'显微镜与望远镜'}
-      ]},
-      { id:'ch05', n:5, title:'质量与密度', icon:'⚖️', sections:[
-        {id:'ch05s1',t:'质量及其测量'},
-        {id:'ch05s2',t:'密度'},
-        {id:'ch05s3',t:'测量固体和液体的密度'},
-        {id:'ch05s4',t:'密度与社会生活'}
-      ]},
-      { id:'ch06', n:6, title:'熟悉而陌生的力', icon:'💪', sections:[
-        {id:'ch06s1',t:'力及其描述'},
-        {id:'ch06s2',t:'弹力与弹簧测力计'},
-        {id:'ch06s3',t:'重力'},
-        {id:'ch06s4',t:'摩擦力'}
-      ]}
-    ]
-  },
-  {
-    id: 'g8s2', label: '八年级下学期', chapters: [
-      { id:'ch07', n:7, title:'力与运动', icon:'🎯', sections:[
-        {id:'ch07s1',t:'牛顿第一定律（惯性）'},
-        {id:'ch07s2',t:'力的合成'},
-        {id:'ch07s3',t:'二力平衡'},
-        {id:'ch07s4',t:'力与运动的关系'}
-      ]},
-      { id:'ch08', n:8, title:'压强', icon:'📏', sections:[
-        {id:'ch08s1',t:'压力与压强'},
-        {id:'ch08s2',t:'增大和减小压强的方法'},
-        {id:'ch08s3',t:'液体压强'},
-        {id:'ch08s4',t:'连通器'},
-        {id:'ch08s5',t:'大气压强'},
-        {id:'ch08s6',t:'流体压强与流速的关系'}
-      ]},
-      { id:'ch09', n:9, title:'浮力', icon:'🛟', sections:[
-        {id:'ch09s1',t:'认识浮力'},
-        {id:'ch09s2',t:'阿基米德原理'},
-        {id:'ch09s3',t:'物体的浮沉条件'},
-        {id:'ch09s4',t:'浮力的应用'}
-      ]},
-      { id:'ch10', n:10, title:'功与机械能', icon:'⚡', sections:[
-        {id:'ch10s1',t:'机械功'},
-        {id:'ch10s2',t:'功率'},
-        {id:'ch10s3',t:'动能与势能'},
-        {id:'ch10s4',t:'机械能转化及其应用'}
-      ]},
-      { id:'ch11', n:11, title:'简单机械', icon:'🔧', sections:[
-        {id:'ch11s1',t:'杠杆基础'},
-        {id:'ch11s2',t:'杠杆的受力分析与动态平衡'},
-        {id:'ch11s3',t:'滑轮基础'},
-        {id:'ch11s4',t:'滑轮组与机械效率'},
-        {id:'ch11s5',t:'斜面与轮轴'}
-      ]},
-      { id:'ch12', n:12, title:'小粒子与大宇宙', icon:'🔬', sections:[
-        {id:'ch12s1',t:'走进微观——分子与原子'},
-        {id:'ch12s2',t:'看不见的运动——分子动理论'},
-        {id:'ch12s3',t:'内能与比热容'},
-        {id:'ch12s4',t:'热机'},
-        {id:'ch12s5',t:'探索宇宙'}
-      ]}
-    ]
-  },
-  {
-    id: 'g9s1', label: '九年级上学期', chapters: [
-      { id:'ch13', n:13, title:'温度与物态变化', icon:'🌡️', sections:[
-        {id:'ch13s1',t:'温度与温度计'},
-        {id:'ch13s2',t:'熔化与凝固'},
-        {id:'ch13s3',t:'汽化与液化'},
-        {id:'ch13s4',t:'升华与凝华'},
-        {id:'ch13s5',t:'水资源与节水'}
-      ]},
-      { id:'ch14', n:14, title:'内能与热机', icon:'🔥', sections:[
-        {id:'ch14s1',t:'内能及其改变'},
-        {id:'ch14s2',t:'比热容深化'},
-        {id:'ch14s3',t:'热值与热机'},
-        {id:'ch14s4',t:'热机效率与环境保护'}
-      ]},
-      { id:'ch15', n:15, title:'电与电路', icon:'⚡', sections:[
-        {id:'ch15s1',t:'静电现象'},
-        {id:'ch15s2',t:'电路的基本组成'},
-        {id:'ch15s3',t:'串联与并联'},
-        {id:'ch15s4',t:'电流及其测量'},
-        {id:'ch15s5',t:'电压及其测量'},
-        {id:'ch15s6',t:'电阻与变阻器'}
-      ]},
-      { id:'ch16', n:16, title:'探究电路——欧姆定律', icon:'📊', sections:[
-        {id:'ch16s1',t:'欧姆定律——I = U/R'},
-        {id:'ch16s2',t:'电阻的串联与并联'},
-        {id:'ch16s3',t:'伏安法测量电阻'},
-        {id:'ch16s4',t:'电路故障分析'}
-      ]}
-    ]
-  },
-  {
-    id: 'g9s2', label: '九年级下学期', chapters: [
-      { id:'ch17', n:17, title:'电流做功与电功率', icon:'💡', sections:[
-        {id:'ch17s1',t:'电功——W = UIt'},
-        {id:'ch17s2',t:'电功率——P = UI'},
-        {id:'ch17s3',t:'焦耳定律——Q = I²Rt'},
-        {id:'ch17s4',t:'家庭电路与安全用电'}
-      ]},
-      { id:'ch18', n:18, title:'磁及其相互作用', icon:'🧲', sections:[
-        {id:'ch18s1',t:'磁现象与磁场'},
-        {id:'ch18s2',t:'电流的磁效应——安培定则'},
-        {id:'ch18s3',t:'电磁铁与电磁继电器'},
-        {id:'ch18s4',t:'磁场对电流的作用——电动机'}
-      ]},
-      { id:'ch19', n:19, title:'电能从哪里来', icon:'🔋', sections:[
-        {id:'ch19s1',t:'电磁感应——法拉第'},
-        {id:'ch19s2',t:'发电机'},
-        {id:'ch19s3',t:'电能的输送'}
-      ]},
-      { id:'ch20', n:20, title:'电磁波与信息时代', icon:'📡', sections:[
-        {id:'ch20s1',t:'电磁波的产生与传播'},
-        {id:'ch20s2',t:'广播、电视与移动通信'},
-        {id:'ch20s3',t:'光纤通信'},
-        {id:'ch20s4',t:'卫星通信与互联网'}
-      ]},
-      { id:'ch21', n:21, title:'能源、材料与社会', icon:'🌍', sections:[
-        {id:'ch21s1',t:'能源分类'},
-        {id:'ch21s2',t:'核能——裂变与聚变'},
-        {id:'ch21s3',t:'太阳能'},
-        {id:'ch21s4',t:'能源与可持续发展'}
-      ]}
-    ]
-  }
+  {id:'g8s1',label:'八年级上学期（课本第1-5章）',chapters:[
+    {id:'ch01',n:1,title:'测量',icon:'📏',sections:[
+      {id:'ch01s1',t:'长度的测量'},{id:'ch01s2',t:'时间的测量'},
+      {id:'ch01s3',t:'质量的测量'},{id:'ch01s4',t:'跨学科实践：体质的测量与评价'}]},
+    {id:'ch02',n:2,title:'机械运动',icon:'🏃',sections:[
+      {id:'ch02s1',t:'运动与静止'},{id:'ch02s2',t:'运动的快慢'},
+      {id:'ch02s3',t:'速度的测量'}]},
+    {id:'ch03',n:3,title:'声现象',icon:'🔊',sections:[
+      {id:'ch03s1',t:'声音的产生和传播'},{id:'ch03s2',t:'声音的特性'},
+      {id:'ch03s3',t:'声波的应用和控制'},{id:'ch03s4',t:'跨学科实践：简单乐器的制作'}]},
+    {id:'ch04',n:4,title:'光现象',icon:'💡',sections:[
+      {id:'ch04s1',t:'光的反射'},{id:'ch04s2',t:'平面镜成像'},
+      {id:'ch04s3',t:'光的折射'},{id:'ch04s4',t:'凸透镜成像'},
+      {id:'ch04s5',t:'透镜的应用'}]},
+    {id:'ch05',n:5,title:'运动和力',icon:'💪',sections:[
+      {id:'ch05s1',t:'力'},{id:'ch05s2',t:'弹力 重力'},
+      {id:'ch05s3',t:'二力合成 二力平衡'},{id:'ch05s4',t:'摩擦力'},
+      {id:'ch05s5',t:'牛顿第一定律'}]}]},
+  {id:'g8s2',label:'八年级下学期（课本第6-9章）',chapters:[
+    {id:'ch06',n:6,title:'密度与压强',icon:'⚖️',sections:[
+      {id:'ch06s1',t:'物质的密度'},{id:'ch06s2',t:'固体、液体密度的测量'},
+      {id:'ch06s3',t:'压力与压强'},{id:'ch06s4',t:'液体压强'},
+      {id:'ch06s5',t:'大气压强'},{id:'ch06s6',t:'流体压强与流速的关系'}]},
+    {id:'ch07',n:7,title:'浮力',icon:'🛟',sections:[
+      {id:'ch07s1',t:'浮力'},{id:'ch07s2',t:'阿基米德原理'},
+      {id:'ch07s3',t:'浮沉的条件及应用'},{id:'ch07s4',t:'跨学科实践：我国造船技术的发展'}]},
+    {id:'ch08',n:8,title:'简单机械 功和能',icon:'🔧',sections:[
+      {id:'ch08s1',t:'杠杆'},{id:'ch08s2',t:'滑轮'},
+      {id:'ch08s3',t:'功与功率'},{id:'ch08s4',t:'机械能及其转化'},
+      {id:'ch08s5',t:'机械效率'},{id:'ch08s6',t:'跨学科实践：斜拉桥的原理与模型制作'}]},
+    {id:'ch09',n:9,title:'物态变化',icon:'🌡️',sections:[
+      {id:'ch09s1',t:'温度'},{id:'ch09s2',t:'汽化和液化'},
+      {id:'ch09s3',t:'熔化和凝固'},{id:'ch09s4',t:'升华和凝华'}]}]},
+  {id:'g9s1',label:'九年级上学期（课程框架）',chapters:[
+    {id:'ch10',n:10,title:'内能与热机',icon:'🔥',sections:[
+      {id:'ch10s1',t:'内能及其改变'},{id:'ch10s2',t:'比热容'},
+      {id:'ch10s3',t:'热值与热机'},{id:'ch10s4',t:'热机效率与环境保护'}]},
+    {id:'ch11',n:11,title:'电与电路',icon:'⚡',sections:[
+      {id:'ch11s1',t:'静电现象'},{id:'ch11s2',t:'电路的基本组成'},
+      {id:'ch11s3',t:'串联与并联'},{id:'ch11s4',t:'电流及其测量'},
+      {id:'ch11s5',t:'电压及其测量'},{id:'ch11s6',t:'电阻与变阻器'}]},
+    {id:'ch12',n:12,title:'探究电路——欧姆定律',icon:'📊',sections:[
+      {id:'ch12s1',t:'欧姆定律 I=U/R'},{id:'ch12s2',t:'电阻的串联与并联'},
+      {id:'ch12s3',t:'伏安法测量电阻'},{id:'ch12s4',t:'电路故障分析'}]}]},
+  {id:'g9s2',label:'九年级下学期（课程框架）',chapters:[
+    {id:'ch13',n:13,title:'电流做功与电功率',icon:'💡',sections:[
+      {id:'ch13s1',t:'电功 W=UIt'},{id:'ch13s2',t:'电功率 P=UI'},
+      {id:'ch13s3',t:'焦耳定律 Q=I²Rt'},{id:'ch13s4',t:'家庭电路与安全用电'}]},
+    {id:'ch14',n:14,title:'磁及其相互作用',icon:'🧲',sections:[
+      {id:'ch14s1',t:'磁现象与磁场'},{id:'ch14s2',t:'电流的磁效应——安培定则'},
+      {id:'ch14s3',t:'电磁铁与电磁继电器'},{id:'ch14s4',t:'磁场对电流的作用——电动机'}]},
+    {id:'ch15',n:15,title:'电能从哪里来',icon:'🔋',sections:[
+      {id:'ch15s1',t:'电磁感应——法拉第'},{id:'ch15s2',t:'发电机'},
+      {id:'ch15s3',t:'电能的输送'}]},
+    {id:'ch16',n:16,title:'电磁波与信息时代',icon:'📡',sections:[
+      {id:'ch16s1',t:'电磁波的产生与传播'},{id:'ch16s2',t:'现代通信技术'},
+      {id:'ch16s3',t:'能源、材料与社会'}]}]}
 ];
 
 // ===== Render Sidebar (三级: 年级→章→节) =====
@@ -597,7 +505,7 @@ const COURSE = [
 // When real content is available, define it here. Otherwise placeholder is shown.
 const CHAPTER_CONTENT = {};
 
-// ===== Ch01 运动的世界 (八年级上学期) =====
+// ===== Ch01 测量 (八上·课本第1章) =====
 CHAPTER_CONTENT['ch01'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>运动的世界是初中物理力学的开篇，也是整个物理学的起点。本章从<strong>长度与时间的测量</strong>入手，建立测量的基本规范；引入<strong>参照物</strong>概念理解运动的相对性；通过速度公式 $v = \\frac{s}{t}$ 定量描述运动的快慢；最后用实验方法<strong>测量平均速度</strong>。本章是后续学习力、运动定律、功和能的基础，中考中常以填空题、计算题和实验探究题形式出现。速度单位的换算（1 m/s = 3.6 km/h）和 s-t / v-t 图像分析是高频易错点。
@@ -784,7 +692,7 @@ CHAPTER_CONTENT['ch01'] = `
 </div>
 `;
 
-// ===== Ch02 声的世界 (八年级上学期) =====
+// ===== Ch02 机械运动 (八上·课本第2章) =====
 CHAPTER_CONTENT['ch02'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>声的世界是八年级上学期与日常生活联系最紧密的章节。本章从<strong>声音的产生（振动）与传播（需要介质）</strong>出发，探究声音的三大特性——<strong>音调（频率）、响度（振幅）和音色（波形）</strong>，再延伸到<strong>超声波与次声波</strong>及其应用，最后讨论<strong>噪声的危害与控制</strong>。中考中常以选择题、填空题和简答题出现，声速计算（回声测距）和声音三特性的区分是核心考点。
@@ -984,7 +892,7 @@ CHAPTER_CONTENT['ch02'] = `
 </div>
 `;
 
-// ===== Ch03 光的世界 (八年级上学期) =====
+// ===== Ch03 声现象 (八上·课本第3章) =====
 CHAPTER_CONTENT['ch03'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>光的世界是八年级光学的基础章，涵盖几何光学的核心定律。本章从<strong>光的直线传播</strong>（影子、日月食、小孔成像）出发，引出<strong>光的反射定律</strong>（三线共面、两角相等）和<strong>平面镜成像规律</strong>（虚像、等大、等距），再深入<strong>光的折射定律</strong>（空气入介质中折射角 < 入射角），最后以<strong>光的色散</strong>（白光由七色光复合而成）收尾。上海中考中反射定律、平面镜成像特点、折射现象辨析是核心考点，常以作图题、实验探究题和选择题出现。
@@ -1224,7 +1132,7 @@ CHAPTER_CONTENT['ch03'] = `
 </div>
 `;
 
-// ===== Ch04 神奇的透镜 (八年级上学期) =====
+// ===== Ch04 光现象 (八上·课本第4章) =====
 CHAPTER_CONTENT['ch04'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>神奇的透镜是八年级上学期光学的压轴章节，也是上海中考必考重点。本章从<strong>凸透镜（会聚）与凹透镜（发散）</strong>的基本概念出发，系统学习<strong>凸透镜成像规律</strong>——五种物距对应五种成像情况（u>2f照相机、f<u<2f投影仪、u<f放大镜等），并将透镜原理与<strong>人眼结构、近视/远视矫正</strong>及<strong>显微镜、望远镜</strong>等光学仪器联系起来。凸透镜成像规律的实验探究（光具座实验）是中考必考内容，要求准确记忆并灵活应用。
@@ -1615,7 +1523,7 @@ CHAPTER_CONTENT['ch05'] = `
   </div>
 </div>
 `;
-// ===== Ch06 熟悉而陌生的力 (八年级上学期) =====
+// ===== Ch05 运动和力 (八上·课本第5章) =====
 CHAPTER_CONTENT['ch06'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>"熟悉而陌生的力"是沪科版八年级上学期的力学开篇章节，也是整个初中力学体系的基石。本章从"力是什么"出发，系统学习力的概念、力的作用效果、力的三要素与力的示意图，进而学习三种最常见的力——<strong>弹力</strong>、<strong>重力</strong>和<strong>摩擦力</strong>。本章核心考点包括：力的作用是相互的、弹簧测力计的使用、重力公式 $G = mg$、影响滑动摩擦力大小的因素（控制变量法）、增大和减小摩擦的方法。中考中常见于选择题、填空题和实验探究题，分值为 4～8 分。
@@ -1767,7 +1675,7 @@ CHAPTER_CONTENT['ch06'] = `
 </div>
 `;
 
-// ===== Ch07 力与运动 (八年级下学期) =====
+// ===== Ch06 密度与压强 (八下·课本第6章) ⊙已更新 =====
 CHAPTER_CONTENT['ch07'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>"力与运动"是沪科版八年级下学期力学核心章节，系统揭示了力与运动之间的本质关系。本章以<strong>牛顿第一定律（惯性定律）</strong>为理论基石，引入<strong>惯性</strong>的概念，进而学习力的合成、二力平衡条件，最终建立起力与运动的完整关系框架——力是改变物体运动状态的原因，而非维持运动的原因。本章是中考力学分析题的<strong>必考内容</strong>，常见于选择题、填空题和作图题（二力平衡受力分析），分值约 5～8 分。
@@ -1897,7 +1805,7 @@ CHAPTER_CONTENT['ch07'] = `
 </div>
 `;
 
-// ===== Ch08 压强 (八年级下学期) =====
+// ===== Ch07 浮力 (八下·课本第7章) ⊙已更新 =====
 CHAPTER_CONTENT['ch08'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>"压强"是沪科版八年级下学期力学重点章节，也是上海中考物理的<strong>核心高频考点</strong>（占分值 8～12 分）。本章从压力与压强的概念出发，系统学习固体压强、液体压强、大气压强和流体压强四大模块。核心公式 $p = F / S$（固体压强）和 $p = \\rho g h$（液体压强）是中考计算题的必考内容。液体压强规律的实验探究（微小压强计）、托里拆利实验、流体压强与流速的关系（伯努利原理）也是常考的实验与现象分析题。本章内容与生活联系极为紧密——从书包带做宽到深海潜水器，从吸管喝饮料到飞机升力，处处渗透着压强的应用。
@@ -2067,7 +1975,7 @@ CHAPTER_CONTENT['ch08'] = `
 </div>
 `;
 
-// ===== Ch09 浮力 (八年级下学期) =====
+// ===== Ch08 简单机械 功和能 (八下·课本第8章) ⊙已更新 =====
 CHAPTER_CONTENT['ch09'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>"浮力"是沪科版八年级下学期力学的综合应用章节，与密度、压强、二力平衡等知识紧密关联。本章以<strong>阿基米德原理</strong>为核心——$F_{\\text{浮}} = G_{\\text{排}} = \\rho_{\\text{液}} g V_{\\text{排}}$，结合<strong>物体的浮沉条件</strong>，系统解决浮力相关的计算和判断问题。本章是中考力学<strong>压轴题的高频出处</strong>（占分值 6～10 分），常见题型包括浮力大小的计算、物体浮沉的判断、密度计原理以及浮力与压强结合的综合题。解题关键在于正确分析物体的受力、确定 $V_{\\text{排}}$ 与 $V_{\\text{物}}$ 的关系、灵活运用阿基米德原理与平衡条件。
@@ -2192,7 +2100,7 @@ CHAPTER_CONTENT['ch09'] = `
 </div>
 `;
 
-// ===== Ch10 功与机械能 (八年级下学期) =====
+// ===== Ch09 物态变化 (八下·课本第9章) ⊙已更新 =====
 CHAPTER_CONTENT['ch10'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>"功与机械能"是沪科版八年级下学期力学的收尾章节，建立了<strong>功和能</strong>的概念体系。本章从<strong>机械功</strong>的定义（$W = Fs$）出发，引入<strong>功率</strong>（$P = W / t$）来描述做功的快慢，进而学习动能、重力势能和弹性势能的概念及其影响因素，最终建立起<strong>机械能守恒定律</strong>的完整框架。本章是中考计算题的常客（占分值 5～8 分），常与简单机械、运动学结合出综合题。核心考点包括：做功的两个必要条件判断、功和功率的计算、探究动能大小与哪些因素有关的实验、机械能转化的分析（如滚摆、单摆、卫星运动等）。
@@ -2956,7 +2864,7 @@ CHAPTER_CONTENT['ch12'] = `
 </div>
 `;
 
-// ===== Ch13 温度与物态变化 (九年级上学期) =====
+// ===== Ch10 内能与热机 (九上·课程框架) =====
 CHAPTER_CONTENT['ch13'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>温度与物态变化是沪科版九年级上学期开篇第一章，是热学的基础。本章围绕<strong>温度测量</strong>和<strong>六种物态变化</strong>展开——熔化与凝固、汽化与液化、升华与凝华。核心考点包括：晶体熔化曲线分析（平台的含义）、蒸发与沸腾的对比、影响蒸发快慢的因素、沸点与气压的关系。上海中考常以实验探究题和图像分析题形式出现。
@@ -3172,7 +3080,7 @@ CHAPTER_CONTENT['ch13'] = `
   </div>
 </div>`;
 
-// ===== Ch14 内能与热机 (九年级上学期) =====
+// ===== Ch11 电与电路 (九上·课程框架) =====
 CHAPTER_CONTENT['ch14'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>内能与热机是九年级热学的深化章节，在温度与物态变化的基础上，从微观分子动理论的角度揭示了<strong>内能</strong>的本质。本章核心知识链：分子动能+分子势能→内能→改变内能的两种方式（做功与热传递）→比热容的定量计算（$Q = cm\\Delta t$）→热值的能量转化→热机的工作原理→热机效率与环境保护。上海中考中，比热容计算（热平衡方程）和热机效率是高频计算题来源，常与功和功率、电热综合交叉考查。
@@ -3396,7 +3304,7 @@ CHAPTER_CONTENT['ch14'] = `
 </div>
 `;
 
-// ===== Ch15 电与电路 (九年级上学期) =====
+// ===== Ch12 探究电路——欧姆定律 (九上·课程框架) =====
 CHAPTER_CONTENT['ch15'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>电与电路是九年级电学的人门章节，是从"看得见的力学"过渡到"看不见的电学"的关键桥梁。本章从<strong>静电现象</strong>（摩擦起电、电荷间相互作用）引入电荷概念，建立<strong>电路的基本组成</strong>（电源、用电器、开关、导线），通过<strong>串联与并联</strong>的对比掌握两种基本电路连接方式，最后学习电学的三个基本物理量——<strong>电流（I=Q/t）</strong>、<strong>电压</strong>和<strong>电阻</strong>及其测量工具（电流表、电压表、滑动变阻器）。本章是后续欧姆定律和电功率学习的基石，中考必考电路识别与设计、电流表电压表使用规则。
@@ -3704,7 +3612,7 @@ CHAPTER_CONTENT['ch15'] = `
 </div>
 `;
 
-// ===== Ch16 探究电路——欧姆定律 (九年级上学期) ⭐最重要章节 =====
+// ===== Ch13 电流做功与电功率 (九下·课程框架) =====
 CHAPTER_CONTENT['ch16'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>探究电路——欧姆定律是<strong style="color:var(--danger);">整个九年级物理最核心、最重要的章节</strong>，没有之一！欧姆定律 $I = U/R$ 是电学的"牛顿第二定律"，贯穿中考电学全部计算。本章从<strong>欧姆定律的实验探究</strong>入手（控制变量法：先保持 R 不变探究 I-U 关系；再保持 U 不变探究 I-R 关系），推导出 $I = U/R$，然后将其应用于<strong>电阻串并联的总电阻计算</strong>、<strong>伏安法测电阻</strong>实验，最后综合运用欧姆定律进行<strong>电路故障分析</strong>。上海中考中，欧姆定律相关题目占电学总分的 60% 以上，结合动态电路分析、图像问题和实验设计考查。
@@ -4005,7 +3913,7 @@ CHAPTER_CONTENT['ch16'] = `
 </div>
 `;
 
-// ===== Ch17 电流做功与电功率 (九年级下学期) =====
+// ===== Ch14 磁及其相互作用 (九下·课程框架) =====
 CHAPTER_CONTENT['ch17'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>电流做功与电功率是九年级电学的集大成章节，将欧姆定律与能量观念深度融合。本章核心知识链：电功——电流做功的多少（$W = UIt$）→ 电功率——电流做功的快慢（$P = UI$）→ 焦耳定律——电流热效应的定量规律（$Q = I^2Rt$）→ 家庭电路与安全用电。上海中考中，电功率的计算（特别是额定功率与实际功率的区分）、焦耳定律与欧姆定律的综合应用（多档位电热器问题）是永恒的压轴题型，家庭电路中的故障与安全分析也频繁出现。
@@ -4245,7 +4153,7 @@ CHAPTER_CONTENT['ch17'] = `
 </div>
 `;
 
-// ===== Ch18 磁及其相互作用 (九年级下学期) =====
+// ===== Ch15 电能从哪里来 (九下·课程框架) =====
 CHAPTER_CONTENT['ch18'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>磁及其相互作用是九年级下学期电磁学的核心章节，是连接电学与磁学的桥梁。本章从<strong>磁现象与磁场</strong>的基本概念出发，引出<strong>电流的磁效应（奥斯特实验）</strong>和<strong>安培定则（右手螺旋定则）</strong>判断通电螺线管的磁极；再学习<strong>电磁铁与电磁继电器</strong>的实际应用；最后探究<strong>磁场对电流的作用</strong>（左手定则）和电动机工作原理。中考中安培定则判断磁极、电磁铁磁性强弱影响因素、电动机与发电机原理辨析是核心考点，常以作图题（绕螺线管）、填空题和实验探究题出现。
@@ -4471,7 +4379,7 @@ CHAPTER_CONTENT['ch18'] = `
 </div>
 `;
 
-// ===== Ch19 电能从哪里来 (九年级下学期) =====
+// ===== Ch16 电磁波与信息能源 (九下·课程框架) =====
 CHAPTER_CONTENT['ch19'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>电能从哪里来是九年级下学期电磁学的延伸章节，揭示了"磁如何生电"——<strong>电磁感应</strong>现象。本章从法拉第实验出发，引出<strong>感应电流的产生条件</strong>（闭合回路 + 切割磁感线）和<strong>影响感应电流方向的因素</strong>；进而学习<strong>发电机原理</strong>（交流发电机与直流发电机的区别、频率与转速关系）；最后探究<strong>电能输送</strong>中的功率损耗问题——远距离输电为什么采用高压（$P_{\\text{损}} = I^2R$）。中考中电磁感应条件的辨析、发电机原理图识别、输电损耗计算是核心考点。
@@ -4666,7 +4574,6 @@ CHAPTER_CONTENT['ch19'] = `
 </div>
 `;
 
-// ===== Ch20 电磁波与信息时代 (九年级下学期) =====
 CHAPTER_CONTENT['ch20'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>电磁波与信息时代是九年级下学期物理与现代科技联系最紧密的章节。本章从<strong>电磁波的产生</strong>（变化的电流产生电磁波）与<strong>传播</strong>（真空中 c = 3×10<sup>8</sup> m/s，c = fλ）出发，引出电磁波谱的完整框架（无线电波、微波、红外线、可见光、紫外线、X射线、γ射线）；进而依次学习<strong>广播、电视与移动通信</strong>的基本原理（调制、发射、接收、解调）、<strong>光纤通信</strong>（光的全反射原理）和<strong>卫星通信与互联网</strong>。中考中电磁波波速公式计算、电磁波谱排列顺序、光纤通信原理是核心考点，常以选择题和填空题出现。
@@ -4896,7 +4803,6 @@ CHAPTER_CONTENT['ch20'] = `
 </div>
 `;
 
-// ===== Ch21 能源、材料与社会 (九年级下学期) =====
 CHAPTER_CONTENT['ch21'] = `
 <div class="chapter-intro">
   <strong>📖 本章概述：</strong>能源、材料与社会是沪科版初中物理的收官章节，核心在于帮助学生建立<strong>能源分类框架</strong>（可再生 vs 不可再生、一次能源 vs 二次能源），理解<strong>核能的两种释放方式</strong>（裂变与聚变）及其应用（核电站、氢弹），认识<strong>太阳能</strong>的巨大潜力与利用方式，最终树立<strong>可持续发展</strong>理念。中考中以选择题和填空题为主，能源分类标准辨析、核电站工作原理、太阳能转化途径是核心考点。本章体现物理学科的STS（科学-技术-社会）教育理念。
